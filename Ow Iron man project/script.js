@@ -19,4 +19,5 @@ class Hero
 }
 
 const Ana = new Hero(kSUPPORT, e, Ana);
+heroList + Ana;
 
