@@ -2,10 +2,15 @@ const kSUPPORT = "Support";
 const kDAMAGE = "Damage";
 const kTANK = "Tank";
 
-heroList = new Array;
-supportHeroList = new Array;
-damageHeroList = new Array;
-tankHeroList = new Array;
+var heroList = new Array;
+var supportHeroList = new Array;
+var damageHeroList = new Array;
+var tankHeroList = new Array;
+
+var currentHeroSelection = null;
+var currentTankSelection = null;
+var currentDmageSelection = null;
+var currentSupportSelection = null;
 
 class Hero 
 {
@@ -20,52 +25,140 @@ class Hero
 
 function addSupportHerosToLists()
 {
-    const Ana = new Hero(kSUPPORT, "assets/Ana.png", "Ana");
+    Ana = new Hero(kSUPPORT, "assets/Ana.png", "Ana");
     heroList.push(Ana);
     supportHeroList.push(Ana);
 
-    const Baptiste = new Hero(kSUPPORT, "assets/Baptiste.png", "Baptiste");
+    Baptiste = new Hero(kSUPPORT, "assets/Baptiste.png", "Baptiste");
     heroList.push(Baptiste);
     supportHeroList.push(Baptiste);
 
-    const Brigitte = new Hero(kSUPPORT, "assets/Brigitte.png", "Brigitte");
+    Brigitte = new Hero(kSUPPORT, "assets/Brigitte.png", "Brigitte");
     heroList.push(Brigitte);
     supportHeroList.push(Brigitte);
 
-    const Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
+    Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
     heroList.push(Juno);
     supportHeroList.push(Juno);
 
-    const Kiriko = new Hero(kSUPPORT, "assets/Kiriko.png", "Kiriko")
+    Kiriko = new Hero(kSUPPORT, "assets/Kiriko.png", "Kiriko")
     heroList.push(Kiriko);
     supportHeroList.push(Kiriko);
 
-    const Lúcio  = new Hero(kSUPPORT, "assets/Lúcio .png", "Lúcio")
-    heroList.push(Lúcio );
-    supportHeroList.push(Lúcio );
+    Lúcio  = new Hero(kSUPPORT, "assets/Lúcio .png", "Lúcio")
+    heroList.push(Lúcio);
+    supportHeroList.push(Lúcio);
 
-    const Lifeweaver = new Hero(kSUPPORT, "assets/Lifeweaver.png", "Lifeweaver")
+    Lifeweaver = new Hero(kSUPPORT, "assets/Lifeweaver.png", "Lifeweaver")
     heroList.push(Lifeweaver);
     supportHeroList.push(Lifeweaver);
 
-    const Mercy = new Hero(kSUPPORT, "assets/Mercy.png", "Mercy")
+    Mercy = new Hero(kSUPPORT, "assets/Mercy.png", "Mercy")
     heroList.push(Mercy);
     supportHeroList.push(Mercy);
 
-    const Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
+    Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
     heroList.push(Moira);
     supportHeroList.push(Moira);
 
-    const Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", "Wuyang")
+    Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", "Wuyang")
     heroList.push(Wuyang);
     supportHeroList.push(Wuyang);
 
-    const Zenyatta = new Hero(kSUPPORT, "assets/Zenyatta.png", "Zenyatta")
+    Zenyatta = new Hero(kSUPPORT, "assets/Zenyatta.png", "Zenyatta")
     heroList.push(Zenyatta);
     supportHeroList.push(Zenyatta);
 
+    
+
 }
 
+function pickRandomHero()
+{
+    if (currentHeroSelection == null)
+    {
+        let min = 0;
+        let max = heroList.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
+    else
+    {
+        let min = 0;
+        let max = currentHeroSelection.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+}
+
+function pickRandomTank()
+{
+    if (currentHeroSelection == null)
+    {
+        let min = 0;
+        let max = tankHeroList.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    else
+    {
+        let min = 0;
+        let max = currentHeroSelection.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+}
+
+function pickRandomDamage()
+{
+
+    if (currentHeroSelection == null)
+    {
+        let min = 0;
+        let max = damageHeroList.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    else
+    {
+        let min = 0;
+        let max = currentHeroSelection.length;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+}
+
+function pickRandomSupport()
+{
+
+    if (currentHeroSelection == null)
+    {
+        let min = 0;
+        let max = supportHeroList.length;
+        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+        var img = document.createElement("img");
+        img.src = supportHeroList[randomHero].Image;
+        var doc = document.getElementById("imageContainer");
+        doc.appendChild(img);
+
+        currentSupportSelection = supportHeroList.filter(item => item !== supportHeroList[randomHero]);
+        
+    }
+
+    else
+    {
+        let min = 0;
+        let max = currentHeroSelection.length;
+        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+        doc.removeChild(img);
+        var img = document.createElement("img");
+        img.src = supportHeroList[randomHero].Image;
+        
+        
+        var doc = document.getElementById("imageContainer");
+        doc.appendChild(img);
+
+        currentSupportSelection = currentSupportSelection.filter(item => item !== supportHeroList[randomHero]);
+    }
+}
 
 
