@@ -32,39 +32,40 @@ function addSupportHerosToLists()
     heroList.push(Brigitte);
     supportHeroList.push(Brigitte);
 
-    const Juno = new Hero(kSUPPORT, "assets/Juno.png", Juno)
+    const Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
     heroList.push(Juno);
     supportHeroList.push(Juno);
 
-    const Kirko = new Hero(kSUPPORT, "assets/Kirko.png", Kirko)
-    heroList.push(Kirko);
-    supportHeroList.push(Kirko);
+    const Kiriko = new Hero(kSUPPORT, "assets/Kiriko.png", "Kiriko")
+    heroList.push(Kiriko);
+    supportHeroList.push(Kiriko);
 
-    const Lúcio  = new Hero(kSUPPORT, "assets/Lúcio .png", Lúcio)
+    const Lúcio  = new Hero(kSUPPORT, "assets/Lúcio .png", "Lúcio")
     heroList.push(Lúcio );
     supportHeroList.push(Lúcio );
 
-    const Lifeweaver = new Hero(kSUPPORT, "assets/Lifeweaver.png", Lifeweaver)
+    const Lifeweaver = new Hero(kSUPPORT, "assets/Lifeweaver.png", "Lifeweaver")
     heroList.push(Lifeweaver);
     supportHeroList.push(Lifeweaver);
 
-    const Mercy = new Hero(kSUPPORT, "assets/Mercy.png", Mercy)
+    const Mercy = new Hero(kSUPPORT, "assets/Mercy.png", "Mercy")
     heroList.push(Mercy);
     supportHeroList.push(Mercy);
 
-    const Moira = new Hero(kSUPPORT, "assets/Moira.png", Moira)
+    const Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
     heroList.push(Moira);
     supportHeroList.push(Moira);
 
-    const Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", Wuyang)
+    const Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", "Wuyang")
     heroList.push(Wuyang);
     supportHeroList.push(Wuyang);
 
-    const Zenyatta = new Hero(kSUPPORT, "assets/Zenyatta.png", Zenyatta)
+    const Zenyatta = new Hero(kSUPPORT, "assets/Zenyatta.png", "Zenyatta")
     heroList.push(Zenyatta);
     supportHeroList.push(Zenyatta);
 
 }
+
 
 
 
