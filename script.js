@@ -9,7 +9,7 @@ var tankHeroList = new Array;
 
 var currentHeroSelection = null;
 var currentTankSelection = null;
-var currentDmageSelection = null;
+var currentDamageSelection = null;
 var currentSupportSelection = null;
 
 class Hero 
@@ -45,7 +45,7 @@ function addSupportHerosToLists()
     heroList.push(Kiriko);
     supportHeroList.push(Kiriko);
 
-    Lúcio  = new Hero(kSUPPORT, "assets/Lúcio .png", "Lúcio")
+    Lúcio  = new Hero(kSUPPORT, "assets/Lucio.png", "Lúcio")
     heroList.push(Lúcio);
     supportHeroList.push(Lúcio);
 
@@ -160,5 +160,6 @@ function pickRandomSupport()
         currentSupportSelection = currentSupportSelection.filter(item => item !== supportHeroList[randomHero]);
     }
 }
+
 
 
