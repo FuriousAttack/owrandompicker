@@ -36,39 +36,39 @@ function addSupportHerosToLists()
 
     Brigitte = new Hero(kSUPPORT, "assets/Brigitte.png", "Brigitte");
     heroList.push(Brigitte);
-    supportHeroList.push(Brigitte);
+    supportHeroList.push(Brigitte); 
 
     Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
     heroList.push(Juno);
-    supportHeroList.push(Juno);
+    supportHeroList.push(Juno); 
 
     Kiriko = new Hero(kSUPPORT, "assets/Kiriko.png", "Kiriko")
     heroList.push(Kiriko);
     supportHeroList.push(Kiriko);
 
-    Lúcio  = new Hero(kSUPPORT, "assets/Lucio.png", "Lúcio")
+    Lúcio = new Hero(kSUPPORT, "assets/Lucio.png", "Lúcio")
     heroList.push(Lúcio);
-    supportHeroList.push(Lúcio);
+    supportHeroList.push(Lúcio); 
 
     Lifeweaver = new Hero(kSUPPORT, "assets/Lifeweaver.png", "Lifeweaver")
     heroList.push(Lifeweaver);
-    supportHeroList.push(Lifeweaver);
+    supportHeroList.push(Lifeweaver); 
 
     Mercy = new Hero(kSUPPORT, "assets/Mercy.png", "Mercy")
     heroList.push(Mercy);
-    supportHeroList.push(Mercy);
-
+    supportHeroList.push(Mercy); 
+ 
     Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
     heroList.push(Moira);
-    supportHeroList.push(Moira);
+    supportHeroList.push(Moira); 
 
     Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", "Wuyang")
     heroList.push(Wuyang);
-    supportHeroList.push(Wuyang);
+    supportHeroList.push(Wuyang); 
 
     Zenyatta = new Hero(kSUPPORT, "assets/Zenyatta.png", "Zenyatta")
     heroList.push(Zenyatta);
-    supportHeroList.push(Zenyatta);
+    supportHeroList.push(Zenyatta); 
 
     currentSupportSelection = supportHeroList;
 
@@ -128,41 +128,33 @@ function pickRandomDamage()
 
 function pickRandomSupport()
 {
+    var doc;
 
    if (currentSupportSelection.length != 0)
     {
         let min = 0;
-        let max = supportHeroList.length;
+        let max = supportHeroList.length - 1;
         let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
-        
-        var img = document.createElement("img");
-        img.src = supportHeroList[randomHero].Image;
-        var doc = document.getElementById("imageContainer");
-        doc.appendChild(img);
 
-        currentSupportSelection = supportHeroList.filter(item => item !== supportHeroList[randomHero]);
-        
-    }
 
-    else
-    {
-        let min = 0;
-        let max = currentHeroSelection.length;
-        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
         
-        doc.removeChild(img);
-        var img = document.createElement("img");
-        img.src = supportHeroList[randomHero].Image;
-        
-        
-        var doc = document.getElementById("imageContainer");
-        doc.appendChild(img);
+        doc = document.getElementById("imageContainer");
+        if (heroImage != null)
+        {
+            doc.removeChild(heroImage);
+        }
+       
 
-        currentSupportSelection = currentSupportSelection.filter(item => item !== supportHeroList[randomHero]);
+        heroImage = document.createElement("img");
+        heroImage.src = currentSupportSelection[randomHero].Image;
+       
+        doc.appendChild(heroImage);
+
+        currentSupportSelection.splice(randomHero, 1);
+        console.log(currentSupportSelection.length);
     }
         
     
 }
-
 
 
