@@ -128,35 +128,12 @@ function pickRandomDamage()
 
 function pickRandomSupport()
 {
-<<<<<<< HEAD:Ow Iron man project/script.js
-    var doc;
-=======
->>>>>>> 559b8cc86c1c57cd5da1b83bc7388c3f05a2a86a:script.js
 
    if (currentSupportSelection.length != 0)
     {
         let min = 0;
         let max = supportHeroList.length;
         let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
-<<<<<<< HEAD:Ow Iron man project/script.js
-
-
-        
-        doc = document.getElementById("imageContainer");
-        if (heroImage != null)
-        {
-            doc.removeChild(heroImage);
-        }
-       
-
-        heroImage = document.createElement("img");
-        heroImage.src = currentSupportSelection[randomHero].Image;
-       
-        doc.appendChild(heroImage);
-
-        currentSupportSelection.splice(randomHero, 1);
-        console.log(currentSupportSelection.length);
-=======
         
         var img = document.createElement("img");
         img.src = supportHeroList[randomHero].Image;
@@ -182,7 +159,6 @@ function pickRandomSupport()
         doc.appendChild(img);
 
         currentSupportSelection = currentSupportSelection.filter(item => item !== supportHeroList[randomHero]);
->>>>>>> 559b8cc86c1c57cd5da1b83bc7388c3f05a2a86a:script.js
     }
         
     
