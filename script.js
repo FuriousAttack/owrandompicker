@@ -6,7 +6,10 @@ var heroList = new Array;
 var supportHeroList = new Array;
 var damageHeroList = new Array;
 var tankHeroList = new Array;
-var heroImage = null;
+
+var heroTankImage = null;
+var heroDamageImage = null;
+var heroSupportImage = null;
 
 var currentHeroSelection = null;
 var currentTankSelection = null;
@@ -22,6 +25,77 @@ class Hero
         this.Name = name
         this.Status;
     }
+}
+
+function addHerosToLists()
+{
+    
+    addTankHerosToLists();
+    addDamgeHerosToLists();
+    addSupportHerosToLists();
+}
+
+function addTankHerosToLists()
+{
+    Dva = new Hero(kTANK, "assets/D.va.png", "D.va");
+    heroList.push(Dva);
+    tankHeroList.push(Dva);
+
+    Doomfist = new Hero(kTANK, "assets/Doomfist.png", "Doomfist");
+    heroList.push(Doomfist);
+    tankHeroList.push(Doomfist);
+
+    Hazard = new Hero(kTANK, "assets/Hazard.png", "Hazard");
+    heroList.push(Hazard);
+    tankHeroList.push(Hazard);
+
+    JunkerQueen = new Hero(kTANK, "assets/Junker Queen.png", "Junker Queen");
+    heroList.push(JunkerQueen);
+    tankHeroList.push(JunkerQueen);
+
+    Mauga = new Hero(kTANK, "assets/Mauga.png", "Mauga");
+    heroList.push(Mauga);
+    tankHeroList.push(Mauga);
+
+    Orisa = new Hero(kTANK, "assets/Orisa.png", "Orisa");
+    heroList.push(Orisa);
+    tankHeroList.push(Orisa);
+
+    Ramattra = new Hero(kTANK, "assets/Ramattra.png", "Ramattra");
+    heroList.push(Ramattra);
+    tankHeroList.push(Ramattra);
+
+    Reinhardt = new Hero(kTANK, "assets/Reinhardt.png", "Reinhardt");
+    heroList.push(Reinhardt);
+    tankHeroList.push(Reinhardt);
+
+    Roadhog = new Hero(kTANK, "assets/Roadhog.png", "Roadhog");
+    heroList.push(Roadhog);
+    tankHeroList.push(Roadhog);
+
+    Sigma = new Hero(kTANK, "assets/Sigma.png", "Sigma");
+    heroList.push(Sigma);
+    tankHeroList.push(Sigma);
+
+    Winston = new Hero(kTANK, "assets/Winston.png", "Winston");
+    heroList.push(Winston);
+    tankHeroList.push(Winston);
+
+    WreckingBall = new Hero(kTANK, "assets/Wrecking Ball.png", "Wrecking Ball");
+    heroList.push(WreckingBall);
+    tankHeroList.push(WreckingBall);
+
+    Zarya = new Hero(kTANK, "assets/Zarya.png", "Zarya");
+    heroList.push(Zarya);
+    tankHeroList.push(Zarya);
+
+    currentTankSelection = tankHeroList;
+
+}
+
+function addDamgeHerosToLists()
+{
+
 }
 
 function addSupportHerosToLists()
@@ -97,36 +171,59 @@ function pickRandomHero()
 
 function pickRandomTank()
 {
-    if (currentHeroSelection == null)
-    {
-        let min = 0;
-        let max = tankHeroList.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    var doc;
 
-    else
+   if (currentTankSelection.length != 0)
     {
         let min = 0;
-        let max = currentHeroSelection.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        let max = tankHeroList.length - 1;
+        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+        
+        doc = document.getElementById("tankImageContainer");
+        if (heroTankImage != null)
+        {
+            doc.removeChild(heroTankImage);
+        }
+       
+
+        heroTankImage = document.createElement("img");
+        heroTankImage.src = currentTankSelection[randomHero].Image;
+       
+        doc.appendChild(heroTankImage);
+
+        currentTankSelection.splice(randomHero, 1);
+        console.log(currentTankSelection.length);
     }
 }
 
 function pickRandomDamage()
 {
+ var doc;
 
-    if (currentHeroSelection == null)
+   if (currentDamageSelection.length != 0)
     {
         let min = 0;
-        let max = damageHeroList.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+        let max = damageHeroList.length - 1;
+        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    else
-    {
-        let min = 0;
-        let max = currentHeroSelection.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+
+        
+        doc = document.getElementById("damageImageContainer");
+        if (heroDamageImage != null)
+        {
+            doc.removeChild(heroDamageImage);
+        }
+       
+
+        heroDamageImage = document.createElement("img");
+        heroDamageImage.src = currentDamageSelection[randomHero].Image;
+       
+        doc.appendChild(heroDamageImage);
+
+        currentDamageSelection.splice(randomHero, 1);
+        
     }
 }
 
@@ -142,20 +239,20 @@ function pickRandomSupport()
 
 
         
-        doc = document.getElementById("imageContainer");
-        if (heroImage != null)
+        doc = document.getElementById("supportImageContainer");
+        if (heroSupportImage != null)
         {
-            doc.removeChild(heroImage);
+            doc.removeChild(heroSupportImage);
         }
        
 
-        heroImage = document.createElement("img");
-        heroImage.src = currentSupportSelection[randomHero].Image;
+        heroSupportImage = document.createElement("img");
+        heroSupportImage.src = currentSupportSelection[randomHero].Image;
        
-        doc.appendChild(heroImage);
+        doc.appendChild(heroSupportImage);
 
         currentSupportSelection.splice(randomHero, 1);
-        console.log(currentSupportSelection.length);
+        
     }
         
     

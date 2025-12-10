@@ -7,12 +7,29 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="addSupportHerosToLists()">
+<body onload="addHerosToLists()">
+    
+    <div>
+        <button onclick="pickRandomTank()">Show Random Tank</button>
+    </div> 
+    
+    <div>
+        <button onclick="pickRandomDamage()">Show Random Damage</button>
+    </div>
+
     <div>
         <button onclick="pickRandomSupport()">Show Random Support</button>
     </div>
-    <div id="imageContainer">
+    <div id="tankImageContainer">
         
+    </div>
+
+    <div id="damageImageContainer">
+        
+    </div>
+
+    <div id="supportImageContainer">
+
     </div>
 
 </body>
