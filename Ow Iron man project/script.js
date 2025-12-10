@@ -6,10 +6,11 @@ var heroList = new Array;
 var supportHeroList = new Array;
 var damageHeroList = new Array;
 var tankHeroList = new Array;
+var heroImage = null;
 
 var currentHeroSelection = null;
 var currentTankSelection = null;
-var currentDmageSelection = null;
+var currentDamageSelection = null;
 var currentSupportSelection = null;
 
 class Hero 
@@ -69,7 +70,7 @@ function addSupportHerosToLists()
     heroList.push(Zenyatta);
     supportHeroList.push(Zenyatta); 
 
-    
+    currentSupportSelection = supportHeroList;
 
 }
 
@@ -127,42 +128,33 @@ function pickRandomDamage()
 
 function pickRandomSupport()
 {
-    var img;
     var doc;
 
-    if (currentHeroSelection == null)
+   if (currentSupportSelection.length != 0)
     {
         let min = 0;
         let max = supportHeroList.length - 1;
         let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
-        
-        
-        img = document.createElement("img");
-        img.src = supportHeroList[randomHero].Image;
-        doc = document.getElementById("imageContainer");
-        doc.appendChild(img);
 
-        currentSupportSelection = supportHeroList.filter(item => item !== supportHeroList[randomHero]);
+
+        
+        doc = document.getElementById("imageContainer");
+        if (heroImage != null)
+        {
+            doc.removeChild(heroImage);
+        }
        
-    }
 
-    else // NOT HAPPENING
-    {
-        let min = 0;
-        let max = currentHeroSelection.length;
-        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
-        
-        doc.removeChild(img);
-        img = document.createElement("img");
-        img.src = supportHeroList[randomHero].Image;
-        
-        
-        doc = document.getElementById("imageContainer");
-        doc.appendChild(img);
+        heroImage = document.createElement("img");
+        heroImage.src = currentSupportSelection[randomHero].Image;
+       
+        doc.appendChild(heroImage);
 
-        currentSupportSelection = currentSupportSelection.filter(item => item !== supportHeroList[randomHero]);
-        
+        currentSupportSelection.splice(randomHero, 1);
+        console.log(currentSupportSelection.length);
     }
+        
+    
 }
 
 
