@@ -38,6 +38,10 @@ function addSupportHerosToLists()
     heroList.push(Brigitte);
     supportHeroList.push(Brigitte); 
 
+    Illari = new Hero(kSUPPORT, "assets/Illari.png", "Illari");
+    heroList.push(Illari);
+    supportHeroList.push(Illari); 
+
     Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
     heroList.push(Juno);
     supportHeroList.push(Juno); 
