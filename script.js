@@ -22,7 +22,7 @@ class Hero
     {
         this.Role = role;
         this.Image = image;
-        this.Name = name
+        this.Name = name;
         this.Status;
     }
 }
@@ -172,6 +172,7 @@ function addDamageHeroesToLists()
     damageHeroList.push(Widowmaker);
 
     currentDamageSelection = damageHeroList;
+    
 }
 
 function addSupportToLists()
