@@ -27,15 +27,15 @@ class Hero
     }
 }
 
-function addHerosToLists()
+function addHeroesToLists()
 {
     
-    addTankHerosToLists();
-    addDamgeHerosToLists();
-    addSupportHerosToLists();
+    addTankHeroesToLists();
+    addDamageHeroesToLists();
+    addSupportHeroesToLists();
 }
 
-function addTankHerosToLists()
+function addTankHeroesToLists()
 {
     Dva = new Hero(kTANK, "assets/D.va.png", "D.va");
     heroList.push(Dva);
@@ -93,88 +93,88 @@ function addTankHerosToLists()
 
 }
 
-function addDamgeHerosToLists()
+function addDamageHeroesToLists()
 {
-    Ashe = new Hero(kDamage, "assets/Ashe.png", "Ashe");
+    Ashe = new Hero(kDAMAGE, "assets/Ashe.png", "Ashe");
     heroList.push(Ashe);
     damageHeroList.push(Ashe);
 
-    Bastion = new Hero(kDamage, "assets/Bastion.png", "Bastion");
+    Bastion = new Hero(kDAMAGE, "assets/Bastion.png", "Bastion");
     heroList.push(Bastion);
     damageHeroList.push(Bastion);
 
-    Cassidy = new Hero(kDamage, "assets/Cassidy.png", "Cassidy");
+    Cassidy = new Hero(kDAMAGE, "assets/Cassidy.png", "Cassidy");
     heroList.push(Cassidy);
     damageHeroList.push(Cassidy);
 
-    Echo = new Hero(kDamage, "assets/Echo.png", "Echo");
+    Echo = new Hero(kDAMAGE, "assets/Echo.png", "Echo");
     heroList.push(Echo);
     damageHeroList.push(Echo);
 
-    Freja = new Hero(kDamage, "assets/Freja.png", "Freja");
+    Freja = new Hero(kDAMAGE, "assets/Freja.png", "Freja");
     heroList.push(Freja);
     damageHeroList.push(Freja);
 
-    Genji = new Hero(kDamage, "assets/Genji.png", "Genji");
+    Genji = new Hero(kDAMAGE, "assets/Genji.png", "Genji");
     heroList.push(Genji);
     damageHeroList.push(Genji);
 
-    Hanzo = new Hero(kDamage, "assets/Hanzo.png", "Hanzo");
+    Hanzo = new Hero(kDAMAGE, "assets/Hanzo.png", "Hanzo");
     heroList.push(Hanzo);
     damageHeroList.push(Hanzo);
 
-    Junkrat = new Hero(kDamage, "assets/Junkrat.png", "Junkrat");
+    Junkrat = new Hero(kDAMAGE, "assets/Junkrat.png", "Junkrat");
     heroList.push(Junkrat);
     damageHeroList.push(Junkrat);
 
-    Mei = new Hero(kDamage, "assets/Mei.png", "Mei");
+    Mei = new Hero(kDAMAGE, "assets/Mei.png", "Mei");
     heroList.push(Mei);
     damageHeroList.push(Mei);
 
-    Pharah = new Hero(kDamage, "assets/Pharah.png", "Pharah");
+    Pharah = new Hero(kDAMAGE, "assets/Pharah.png", "Pharah");
     heroList.push(Pharah);
     damageHeroList.push(Pharah);
 
-    Reaper = new Hero(kDamage, "assets/Reaper.png", "Reaper");
+    Reaper = new Hero(kDAMAGE, "assets/Reaper.png", "Reaper");
     heroList.push(Reaper);
     damageHeroList.push(Reaper);
 
-    Sojourn = new Hero(kDamage, "assets/Sojourn.png", "Sojourn");
+    Sojourn = new Hero(kDAMAGE, "assets/Sojourn.png", "Sojourn");
     heroList.push(Sojourn);
     damageHeroList.push(Sojourn);
 
-    Soldier76 = new Hero(kDamage, "assets/Soldier 76.png", "Soldier 76");
+    Soldier76 = new Hero(kDAMAGE, "assets/Soldier 76.png", "Soldier 76");
     heroList.push(Soldier76);
     damageHeroList.push(Soldier76);
 
-    Sombra = new Hero(kDamage, "assets/Sombra.png", "Sombra");
+    Sombra = new Hero(kDAMAGE, "assets/Sombra.png", "Sombra");
     heroList.push(Sombra);
     damageHeroList.push(Sombra);
 
-    Symmetra = new Hero(kDamage, "assets/Symmetra.png", "Symmetra");
+    Symmetra = new Hero(kDAMAGE, "assets/Symmetra.png", "Symmetra");
     heroList.push(Symmetra);
     damageHeroList.push(Symmetra);
 
-    Torbjörn = new Hero(kDamage, "assets/Torbjörn.png", "Torbjörn");
+    Torbjörn = new Hero(kDAMAGE, "assets/Torbjörn.png", "Torbjörn");
     heroList.push(Torbjörn);
     damageHeroList.push(Torbjörn);
 
-    Tracer = new Hero(kDamage, "assets/Tracer.png", "Tracer");
+    Tracer = new Hero(kDAMAGE, "assets/Tracer.png", "Tracer");
     heroList.push(Tracer);
     damageHeroList.push(Tracer);
 
-    Venture = new Hero(kDamage, "assets/Venture.png", "Venture");
+    Venture = new Hero(kDAMAGE, "assets/Venture.png", "Venture");
     heroList.push(Venture);
     damageHeroList.push(Venture);
 
-    Widowmaker = new Hero(kDamage, "assets/Widowmaker.png", "Widowmaker");
+    Widowmaker = new Hero(kDAMAGE, "assets/Widowmaker.png", "Widowmaker");
     heroList.push(Widowmaker);
     damageHeroList.push(Widowmaker);
 
     currentDamageSelection = damageHeroList;
 }
 
-function addSupportHerosToLists()
+function addSupportToLists()
 {
     Ana = new Hero(kSUPPORT, "assets/Ana.png", "Ana");
     heroList.push(Ana);
