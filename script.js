@@ -175,7 +175,7 @@ function addDamageHeroesToLists()
     
 }
 
-function addSupportToLists()
+function addSupportHeroesToLists()
 {
     Ana = new Hero(kSUPPORT, "assets/Ana.png", "Ana");
     heroList.push(Ana);
