@@ -163,6 +163,10 @@ function addDamageHeroesToLists()
     heroList.push(Tracer);
     damageHeroList.push(Tracer);
 
+    Vendetta = new Hero(kDAMAGE, "assets/Vendetta.png", "Vendetta");
+    heroList.push(Vendetta);
+    damageHeroList.push(Vendetta);
+    
     Venture = new Hero(kDAMAGE, "assets/Venture.png", "Venture");
     heroList.push(Venture);
     damageHeroList.push(Venture);
