@@ -9,34 +9,54 @@
 </head>
 <body onload="addHeroesToLists()">
     
+    <div id="roleModeDiv">
+        
+        <div id="roleModeButton">
+            <button onclick="showRoleButtons()">Role Mode</button>
+        </div>
 
-    <div id="roleModeButton">
-        <button>Role Mode</button>
+        <div id="randomTankDiv">
+        
+            <div id="tankImageContainer">
+    
+            </div>
+    
+            <div id="randomTankButton">
+                <button onclick="pickRandomTank()">Show Random Tank</button>
+            </div>
+
+        </div>
+       
+        <div id="randomDamageDiv">
+
+            <div id="damageImageContainer">
+    
+            </div>
+      
+            <div id="randomDamageButton">
+            <button onclick="pickRandomDamage()">Show Random Damage</button>
+            </div>
+
+        </div>
+        
+      
+        <div id="randomSupportDiv">
+
+             <div id="supportImageContainer">
+    
+            </div>
+    
+            <div id="randomSupportButton">
+                <button onclick="pickRandomSupport()">Show Random Support</button>
+            </div>
+            
+        </div>
+      
+    
+        
     </div>
 
-    <div id="randomTankButton">
-        <button onclick="pickRandomTank()">Show Random Tank</button>
-    </div> 
    
-    <div id="tankImageContainer">
-        
-    </div>
-
-    <div id="randomDamageButton">
-        <button onclick="pickRandomDamage()">Show Random Damage</button>
-    </div>
-
-    <div id="damageImageContainer">
-        
-    </div>
-
-    <div id="randomSupportButton">
-        <button onclick="pickRandomSupport()">Show Random Support</button>
-    </div>
-
-    <div id="supportImageContainer">
-
-    </div>
 
 </body>
 </html>

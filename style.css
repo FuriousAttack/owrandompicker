@@ -1,10 +1,35 @@
 #roleModeButton
 {
-    visibility: hidden;
-    display: flex;
+    visibility: visible;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 100;
     height: 50;
   
+}
+
+#roleModeDiv
+{
+    visibility: hidden;
+    display: flex;
+    
+}
+
+#roleModeImageDiv
+{
+    justify-content: center;
+    align-items: center;
+    width: 100;
+    height: 50;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+#roleModeButtonDiv
+{
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }

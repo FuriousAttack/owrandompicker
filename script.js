@@ -275,7 +275,6 @@ function pickRandomTank()
         doc.appendChild(heroTankImage);
 
         currentTankSelection.splice(randomHero, 1);
-        console.log(currentTankSelection.length);
     }
 }
 
@@ -339,4 +338,12 @@ function pickRandomSupport()
     
 }
 
+
+function showRoleButtons()
+{
+    var roleModeButton = document.getElementById("roleModeButton");
+    var roleModeDiv = document.getElementById("roleModeDiv");
+    roleModeButton.style.visibility = "hidden";
+    roleModeDiv.style.visibility = "visible";
+}
 
