@@ -95,7 +95,83 @@ function addTankHerosToLists()
 
 function addDamgeHerosToLists()
 {
+    Ashe = new Hero(kDamage, "assets/Ashe.png", "Ashe");
+    heroList.push(Ashe);
+    tankHeroList.push(Ashe);
 
+    Bastion = new Hero(kDamage, "assets/Bastion.png", "Bastion");
+    heroList.push(Bastion);
+    tankHeroList.push(Bastion);
+
+    Cassidy = new Hero(kDamage, "assets/Cassidy.png", "Cassidy");
+    heroList.push(Cassidy);
+    tankHeroList.push(Cassidy);
+
+    Echo = new Hero(kDamage, "assets/Echo.png", "Echo");
+    heroList.push(Echo);
+    tankHeroList.push(Echo);
+
+    Freja = new Hero(kDamage, "assets/Freja.png", "Freja");
+    heroList.push(Freja);
+    tankHeroList.push(Freja);
+
+    Genji = new Hero(kDamage, "assets/Genji.png", "Genji");
+    heroList.push(Genji);
+    tankHeroList.push(Genji);
+
+    Hanzo = new Hero(kDamage, "assets/Hanzo.png", "Hanzo");
+    heroList.push(Hanzo);
+    tankHeroList.push(Hanzo);
+
+    Junkrat = new Hero(kDamage, "assets/Junkrat.png", "Junkrat");
+    heroList.push(Junkrat);
+    tankHeroList.push(Junkrat);
+
+    Mei = new Hero(kDamage, "assets/Mei.png", "Mei");
+    heroList.push(Mei);
+    tankHeroList.push(Mei);
+
+    Pharah = new Hero(kDamage, "assets/Pharah.png", "Pharah");
+    heroList.push(Pharah);
+    tankHeroList.push(Pharah);
+
+    Reaper = new Hero(kDamage, "assets/Reaper.png", "Reaper");
+    heroList.push(Reaper);
+    tankHeroList.push(Reaper);
+
+    Sojourn = new Hero(kDamage, "assets/Sojourn.png", "Sojourn");
+    heroList.push(Sojourn);
+    tankHeroList.push(Sojourn);
+
+    Soldier76 = new Hero(kDamage, "assets/Soldier 76.png", "Soldier 76");
+    heroList.push(Soldier76);
+    tankHeroList.push(Soldier76);
+
+    Sombra = new Hero(kDamage, "assets/Sombra.png", "Sombra");
+    heroList.push(Sombra);
+    tankHeroList.push(Sombra);
+
+    Symmetra = new Hero(kDamage, "assets/Symmetra.png", "Symmetra");
+    heroList.push(Symmetra);
+    tankHeroList.push(Symmetra);
+
+    Torbjörn = new Hero(kDamage, "assets/Torbjörn.png", "Torbjörn");
+    heroList.push(Torbjörn);
+    tankHeroList.push(Torbjörn);
+
+    Tracer = new Hero(kDamage, "assets/Tracer.png", "Tracer");
+    heroList.push(Tracer);
+    tankHeroList.push(Tracer);
+
+    Venture = new Hero(kDamage, "assets/Venture.png", "Venture");
+    heroList.push(Venture);
+    tankHeroList.push(Venture);
+
+    Widowmaker = new Hero(kDamage, "assets/Widowmaker.png", "Widowmaker");
+    heroList.push(Widowmaker);
+    tankHeroList.push(Widowmaker);
+
+    currentDamageSelection = damageHeroList;
 }
 
 function addSupportHerosToLists()
