@@ -1,6 +1,6 @@
 #roleModeButton
 {
-    visibility: hidden;
+    visibility: visible;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -340,3 +340,13 @@ function pickRandomSupport()
 }
 
 
+function showRoleButtons()
+{
+    var tankButton = document.getElementById("randomTankButton");
+    var damageButton = document.getElementById("randomDamageButton");
+    var supportButton = document.getElementById("randomSupportButton");
+    tankButton.style.visibility("visible");
+    damageButton.style.visibility("visible");
+    supportButton.style.visibility("visible");
+}
+
