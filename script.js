@@ -45,6 +45,10 @@ function addTankHeroesToLists()
     heroList.push(Doomfist);
     tankHeroList.push(Doomfist);
 
+    Domina = new Hero(kTANK, "assets/Domina.png", "Domina");
+    heroList.push(Domina);
+    tankHeroList.push(Domina);
+
     Hazard = new Hero(kTANK, "assets/Hazard.png", "Hazard");
     heroList.push(Hazard);
     tankHeroList.push(Hazard);
@@ -95,6 +99,10 @@ function addTankHeroesToLists()
 
 function addDamageHeroesToLists()
 {
+    Anran = new Hero(kDAMAGE, "assets/Anran.png", "Anran");
+    heroList.push(Anran);
+    damageHeroList.push(Anran);
+    
     Ashe = new Hero(kDAMAGE, "assets/Ashe.png", "Ashe");
     heroList.push(Ashe);
     damageHeroList.push(Ashe);
@@ -110,6 +118,10 @@ function addDamageHeroesToLists()
     Echo = new Hero(kDAMAGE, "assets/Echo.png", "Echo");
     heroList.push(Echo);
     damageHeroList.push(Echo);
+
+    Emre = new Hero(kDAMAGE, "assets/Emre.png", "Emre");
+    heroList.push(Emre);
+    damageHeroList.push(Emre);
 
     Freja = new Hero(kDAMAGE, "assets/Freja.png", "Freja");
     heroList.push(Freja);
@@ -197,6 +209,10 @@ function addSupportHeroesToLists()
     heroList.push(Illari);
     supportHeroList.push(Illari); 
 
+    JetpackCat = new Hero(kSUPPORT, "assets/Jetpack Cat.png", "Jetpack Cat");
+    heroList.push(JetpackCat);
+    supportHeroList.push(JetpackCat);
+    
     Juno = new Hero(kSUPPORT, "assets/Juno.png", "Juno")
     heroList.push(Juno);
     supportHeroList.push(Juno); 
@@ -216,6 +232,10 @@ function addSupportHeroesToLists()
     Mercy = new Hero(kSUPPORT, "assets/Mercy.png", "Mercy")
     heroList.push(Mercy);
     supportHeroList.push(Mercy); 
+
+    Mizuki = new Hero(kSUPPORT, "assets/Mizuki.png", "Mizuki")
+    heroList.push(Mizuki);
+    supportHeroList.push(Mizuki); 
  
     Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
     heroList.push(Moira);
