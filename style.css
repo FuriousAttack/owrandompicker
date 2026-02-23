@@ -11,7 +11,7 @@
 
 #roleModeDiv
 {
-    visibility: hidden;
+    visibility: visible;
     display: flex;
     
 }
