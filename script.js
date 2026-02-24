@@ -359,11 +359,14 @@ function pickRandomSupport()
 }
 
 
-function showRoleButtons()
+function goToRolePage()
 {
-    var roleModeButton = document.getElementById("roleModeButton");
-    var roleModeDiv = document.getElementById("roleModeDiv");
-    roleModeButton.style.visibility = "hidden";
-    roleModeDiv.style.visibility = "visible";
+    // This will redirect you to the Random role page when clicked (the "./" is just means look in the same directory)
+    window.location.href = "./RandomRolePage.html";
+}
+
+function goToHome()
+{
+     window.location.href = "./";
 }
 
