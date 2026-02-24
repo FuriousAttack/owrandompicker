@@ -8,6 +8,9 @@
     font-family:'BigNoodleTooOblique';
     font-size:50px;
     width:300px;
+    border:0px;
+    background-color: #ff000000;
+    cursor: pointer;
 }
 
 #roleModeButton
@@ -39,9 +42,8 @@
 
 #roleModeButtonDiv
 {
-    justify-content: right;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    
+    height: 150vh;
 }
-    
