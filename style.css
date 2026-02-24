@@ -34,15 +34,4 @@
     
 }
 
-#randomTankButton {
-   
-    background-color: #f99e1a;
-}
-#randomTankButton:hover {
-    background-color: #ffb84d;
-}
-#randomTankButton:active {
-    background-color: #d47f00;
-}
-
     
