@@ -1,3 +1,15 @@
+@font-face{
+  font-family: 'BigNoodleTooOblique';
+  src: url('./assets/BIGNOODLETOOOBLIQUE.TTF');
+}
+
+#roleModeButtonStyle
+{
+    font-family:'BigNoodleTooOblique';
+    font-size:50px;
+    width:300px;
+}
+
 #roleModeButton
 {
     visibility: visible;
