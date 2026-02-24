@@ -35,6 +35,20 @@
 }
 
 #randomTankButton {
-  background-color: #FC9D1F;
+    padding: 10px 20px;
+    background-color: #f99e1a;
+    color: #1a1a1a;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #d47f00;
+    cursor: pointer;
+    user-select: none;
 }
+#randomTankButton:hover {
+    background-color: #ffb84d;
+}
+#randomTankButton:active {
+    background-color: #d47f00;
+}
+
     
