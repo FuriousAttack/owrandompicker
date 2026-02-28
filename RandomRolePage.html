@@ -1,60 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OW Ironman Picker</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="addHeroesToLists()">
-    
-    <div id="roleModeDiv">
-        
-         <div>
-            <button onclick="goToHome()">Home</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OW Ironman Picker</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="addHeroesToLists()">
+        <div class="content">
+            <video autoplay loop muted plays-inline class="backgroundVideo">
+                <source src="./assets/owbg.mp4" type="video/mp4">
+            </video>
+            <div>
+                <button id="homeButton" onclick="goToHome()">Home</button>
+            </div>
+            <div id="roleModeDiv">
+                <div id="randomTankDiv">
+                    <div id="tankImageContainer">
+                    </div>
+                    <div id="randomTankButton">
+                        <button onclick="pickRandomTank()">Show Random Tank</button>
+                    </div>
+                </div>
+                <div id="randomDamageDiv">
+                    <div id="damageImageContainer">
+                    </div>
+                    <div id="randomDamageButton">
+                        <button onclick="pickRandomDamage()">Show Random Damage</button>
+                    </div>
+                </div>
+                <div id="randomSupportDiv">
+                    <div id="supportImageContainer">
+                    </div>
+                    <div id="randomSupportButton">
+                        <button onclick="pickRandomSupport()">Show Random Support</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div id="randomTankDiv">
-        
-            <div id="tankImageContainer">
-    
-            </div>
-    
-            <div id="randomTankButton">
-                <button onclick="pickRandomTank()">Show Random Tank</button>
-            </div>
-
-        </div>
-       
-        <div id="randomDamageDiv">
-
-            <div id="damageImageContainer">
-    
-            </div>
-      
-            <div id="randomDamageButton">
-            <button onclick="pickRandomDamage()">Show Random Damage</button>
-            </div>
-
-        </div>
-        
-      
-        <div id="randomSupportDiv">
-
-             <div id="supportImageContainer">
-    
-            </div>
-    
-            <div id="randomSupportButton">
-                <button onclick="pickRandomSupport()">Show Random Support</button>
-            </div>
-            
-        </div>
-      
-    
-        
-    </div>
 
    
 

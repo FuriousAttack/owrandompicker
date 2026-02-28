@@ -4,17 +4,38 @@
 }
 
 html {
-    overflow: hidden;
     height: 100%;
 }
 
-body
-{
-    background-image: url(./assets/owbg.png);
-    background-position: center;
-    background-size: cover;
-    background-size: 100% 100%;
+.content{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.backgroundVideo{
+position:absolute;
+right: 0;
+bottom: 0;
+z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .backgroundVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-aspect-ratio: 16/9)
+{
+    .backgroundVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 #roleModeButtonStyle
 {
@@ -56,8 +77,13 @@ body
 
 #roleModeButtonDiv
 {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 90vh;
+position:absolute;
+left: 0;
+}
+
+#homeButton
+{
+    position:absolute;
+    bottom: 0;
+    left: 0;
 }
