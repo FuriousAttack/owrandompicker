@@ -1,6 +1,10 @@
 @font-face{
   font-family: 'BigNoodleTooOblique';
-  src: url('./assets/BIGNOODLETOOOBLIQUE.TTF');
+  src: url('./assets/BIGNOODLETOOOBLIQUE.TTF')
+}
+ @font-face{ 
+    font-family: 'Config';
+    src: url('./assets/CONFIGALT-SEMIBOLD.OTF')
 }
 
 html {
@@ -59,4 +63,48 @@ body
     background-color: #ff000000;
     color:#FC9D1F;
     cursor: pointer;
+}
+
+#randomTankButtonStyle
+{
+    font-family:'Config';
+    font-size:30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:black;
+    background-color: #FC9D1F; 
+    color:white;
+    cursor: pointer;
+}
+
+#randomDamageButtonStyle
+{
+    font-family:'Config';
+    font-size:30px;
+    background-color: #FC9D1F; 
+    border-style: solid;
+    border-width: 2px;
+    border-color:black;
+    color:white;
+    cursor: pointer;
+}
+
+#randomSupportButtonStyle
+{
+    font-family:'Config';
+    font-size:30px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #FC9D1F; 
+    border-color:black;
+    color:white;
+    cursor: pointer;
+}
+
+#roleModeDiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
