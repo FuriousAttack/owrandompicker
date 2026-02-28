@@ -9,11 +9,11 @@
 </head>
 <body onload="addHeroesToLists()">
     
+    <div>
+        <button onclick="goToHome()">Home</button>
+    </div>
+
     <div id="roleModeDiv">
-        
-         <div>
-            <button onclick="goToHome()">Home</button>
-        </div>
 
         <div id="randomTankDiv">
         
@@ -22,7 +22,7 @@
             </div>
     
             <div id="randomTankButton">
-                <button onclick="pickRandomTank()">Show Random Tank</button>
+                <button id="randomTankButtonStyle" onclick="pickRandomTank()">Show Random Tank</button>
             </div>
 
         </div>
@@ -34,7 +34,7 @@
             </div>
       
             <div id="randomDamageButton">
-            <button onclick="pickRandomDamage()">Show Random Damage</button>
+            <button id="randomDamageButtonStyle" onclick="pickRandomDamage()">Show Random Damage</button>
             </div>
 
         </div>
@@ -47,7 +47,7 @@
             </div>
     
             <div id="randomSupportButton">
-                <button onclick="pickRandomSupport()">Show Random Support</button>
+                <button id="randomSupportButtonStyle" onclick="pickRandomSupport()">Show Random Support</button>
             </div>
             
         </div>
