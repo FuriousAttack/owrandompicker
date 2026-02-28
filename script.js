@@ -7,6 +7,7 @@ var supportHeroList = new Array;
 var damageHeroList = new Array;
 var tankHeroList = new Array;
 
+var heroImage = null;
 var heroTankImage = null;
 var heroDamageImage = null;
 var heroSupportImage = null;
@@ -22,17 +23,22 @@ class Hero
     {
         this.Role = role;
         this.Image = image;
-        this.Name = name
+        this.Name = name;
         this.Status;
     }
 }
 
 function addHeroesToLists()
-{
-    
+{   
     addTankHeroesToLists();
     addDamageHeroesToLists();
     addSupportHeroesToLists();
+    addHerosToAllList();
+}
+
+function addHerosToAllList()
+{
+    currentHeroSelection = heroList;
 }
 
 function addTankHeroesToLists()
@@ -253,21 +259,36 @@ function addSupportHeroesToLists()
 
 }
 
+
+
 function pickRandomHero()
 {
-    if (currentHeroSelection == null)
+     var doc;
+
+   if (currentHeroSelection.length != 0)
     {
         let min = 0;
-        let max = heroList.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        let max = heroList.length - 1;
+        let randomHero = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+        
+        doc = document.getElementById("HeroImageContainer");
+        if (heroImage != null)
+        {
+            doc.removeChild(heroImage);
+        }
+       
+
+        heroImage = document.createElement("img");
+        heroImage.src = currentHeroSelection[randomHero].Image;
+       
+        doc.appendChild(heroImage);
+
+        currentHeroSelection.splice(randomHero, 1);
     }
 
-    else
-    {
-        let min = 0;
-        let max = currentHeroSelection.length;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    
 }
 
 function pickRandomTank()
@@ -365,8 +386,11 @@ function goToRolePage()
     window.location.href = "./RandomRolePage.html";
 }
 
+function goToAllPage()
+{
+    window.location.href = "./AllModePage.html";
+}
 function goToHome()
 {
      window.location.href = "./";
 }
-
