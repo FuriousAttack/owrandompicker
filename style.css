@@ -30,20 +30,6 @@ bottom: 0;
 z-index: -1;
 }
 
-@media (min-aspect-ratio: 16/9){
-    .backgroundVideo{
-        width: 100%;
-        height: auto;
-    }
-}
-@media (min-aspect-ratio: 16/9)
-{
-    .backgroundVideo{
-        width: 100%;
-        height: auto;
-    }
-}
-
 
 #roleModeButtonStyle
 {
