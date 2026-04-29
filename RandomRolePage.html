@@ -9,9 +9,6 @@
     </head>
     <body onload="addHeroesToLists()">
         <div class="content">
-            <video autoplay loop muted plays-inline class="backgroundVideo">
-                <source src="./assets/owbg.mp4" type="video/mp4">
-            </video>
             <div>
                 <button id="homeButton" onclick="goToHome()">Home</button>
             </div>
@@ -20,21 +17,21 @@
                     <div id="tankImageContainer">
                     </div>
                     <div id="randomTankButton">
-                        <button onclick="pickRandomTank()">Show Random Tank</button>
+                        <button id="tankModeButtonStyle" onclick="pickRandomTank()">Show Random Tank</button>
                     </div>
                 </div>
                 <div id="randomDamageDiv">
                     <div id="damageImageContainer">
                     </div>
                     <div id="randomDamageButton">
-                        <button onclick="pickRandomDamage()">Show Random Damage</button>
+                        <button id="damageModeButtonStyle" onclick="pickRandomDamage()">Show Random Damage</button>
                     </div>
                 </div>
                 <div id="randomSupportDiv">
                     <div id="supportImageContainer">
                     </div>
                     <div id="randomSupportButton">
-                        <button onclick="pickRandomSupport()">Show Random Support</button>
+                        <button id="supportModeButtonStyle" onclick="pickRandomSupport()">Show Random Support</button>
                     </div>
                 </div>
             </div>
