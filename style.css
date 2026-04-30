@@ -37,7 +37,8 @@ z-index: -1;
     font-size:50px;
     width:300px;
     border:0px;
-    background-color: #ff000000;
+    border-radius: 3px;
+    background-color: #e5661f;
     color:white;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -120,7 +121,7 @@ left: 0;
 #homeButton
 {
     font-family:'BigNoodleTooOblique';
-    font-size:50px;
+    font-size:25px;
     border:0px;
     background-color: #ff000000;
     color:white;
