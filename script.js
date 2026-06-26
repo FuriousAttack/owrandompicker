@@ -151,6 +151,10 @@ function addDamageHeroesToLists()
     heroList.push(Reaper);
     damageHeroList.push(Reaper);
 
+    Shion = new Hero(kDAMAGE, "assets/Shion.png", "Shion");
+    heroList.push(Shion);
+    damageHeroList.push(Shion);
+
     Sierra = new Hero(kDAMAGE, "assets/Sierra.png", "Sierra");
     heroList.push(Sierra);
     damageHeroList.push(Sierra);
