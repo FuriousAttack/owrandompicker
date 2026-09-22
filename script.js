@@ -37,6 +37,10 @@ function addHeroesToLists()
 
 function addTankHeroesToLists()
 {
+    Dmon = new Hero(kTANK, "assets/D.mon.png", "D.mon");
+    heroList.push(Dmon);
+    tankHeroList.push(Dmon);
+    
     Dva = new Hero(kTANK, "assets/D.va.png", "D.va");
     heroList.push(Dva);
     tankHeroList.push(Dva);
