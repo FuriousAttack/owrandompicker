@@ -1,6 +1,15 @@
 const kSUPPORT = "Support";
 const kDAMAGE = "Damage";
 const kTANK = "Tank";
+const kHEROLIST = "heroList";
+const kTANKLIST = "tankList";
+const kDAMAGELIST = "damageList";
+const kSUPPORTLIST = "supportList";
+
+const kHEROLISTCOOKIE = localStorage.getItem(kHEROLIST);
+const kTANKLISTCOOKIE = localStorage.getItem(kTANKLIST);
+const kDAMAGELISTCOOKIE = localStorage.getItem(kDAMAGELIST);
+const kSUPPORTLISTCOOKIE = localStorage.getItem(kSUPPORTLIST);
 
 var heroList = new Array;
 var supportHeroList = new Array;
@@ -29,10 +38,36 @@ class Hero
 
 function addHeroesToLists()
 {
+    if(kTANKLISTCOOKIE)
+    {
+        currentTankSelection = JSON.parse(kTANKLISTCOOKIE);
+    }
+
+    else
+    {
+        addTankHeroesToLists();
+    }
+
+    if(kDAMAGELISTCOOKIE)
+    {
+        currentDamageSelection = JSON.parse(kDAMAGELISTCOOKIE);
+    }
     
-    addTankHeroesToLists();
-    addDamageHeroesToLists();
-    addSupportHeroesToLists();
+    else
+    {
+        addDamageHeroesToLists();
+    }
+
+    if(kSUPPORTLISTCOOKIE)
+    {
+        currentSupportSelection = JSON.parse(kSUPPORTLISTCOOKIE);
+    }
+    
+    else
+    {
+        addSupportHeroesToLists();
+    }
+
 }
 
 function addTankHeroesToLists()
@@ -307,6 +342,8 @@ function pickRandomTank()
         doc.appendChild(heroTankImage);
 
         currentTankSelection.splice(randomHero, 1);
+
+        localStorage.setItem(kTANKLIST, JSON.stringify(currentTankSelection));
     }
 }
 
@@ -336,6 +373,7 @@ function pickRandomDamage()
 
         currentDamageSelection.splice(randomHero, 1);
         
+        localStorage.setItem(kDAMAGELIST, JSON.stringify(currentDamageSelection));
     }
 }
 
@@ -365,11 +403,20 @@ function pickRandomSupport()
 
         currentSupportSelection.splice(randomHero, 1);
         
+
+        localStorage.setItem(kSUPPORTLIST, JSON.stringify(currentSupportSelection));
     }
         
-    
 }
 
+function ResetRoleMode()
+{
+    localStorage.removeItem(kTANKLIST);
+    localStorage.removeItem(kDAMAGELIST);
+    localStorage.removeItem(kSUPPORTLIST);
+
+    location.reload();
+}
 
 function goToRolePage()
 {
