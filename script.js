@@ -206,10 +206,6 @@ function addDamageHeroesToLists()
     heroList.push(Soldier76);
     damageHeroList.push(Soldier76);
 
-    Sombra = new Hero(kDAMAGE, "assets/Sombra.png", "Sombra");
-    heroList.push(Sombra);
-    damageHeroList.push(Sombra);
-
     Symmetra = new Hero(kDAMAGE, "assets/Symmetra.png", "Symmetra");
     heroList.push(Symmetra);
     damageHeroList.push(Symmetra);
@@ -287,6 +283,10 @@ function addSupportHeroesToLists()
     Moira = new Hero(kSUPPORT, "assets/Moira.png", "Moira")
     heroList.push(Moira);
     supportHeroList.push(Moira); 
+
+    Sombra = new Hero(kSUPPORT, "assets/Sombra.png", "Sombra");
+    heroList.push(Sombra);
+    supportHeroList.push(Sombra);
 
     Wuyang = new Hero(kSUPPORT, "assets/Wuyang.png", "Wuyang")
     heroList.push(Wuyang);
